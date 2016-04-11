@@ -19,6 +19,9 @@ public class Main {
         //空闲内存
         long freeMem = Runtime.getRuntime().freeMemory();
         System.out.println(df.format(freeMem/1000000F) + "MB");
+        
+        int availableProcessors = Runtime.getRuntime().availableProcessors();
+        System.out.println(availableProcessors);
     }
  
     /**
