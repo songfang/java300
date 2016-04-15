@@ -106,9 +106,9 @@
 			<artifactId>logback-classic</artifactId>
 			<version>${logback.veresion}</version>
 		</dependency>
-		
+
 		<!-- spring -->
-			<!-- spring -->
+		<!-- spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -159,18 +159,24 @@
 			<artifactId>spring-integration-test</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
+
+		<!--cglib动态代理 -->
 		<dependency>
-            <groupId>org.objenesis</groupId>
-            <artifactId>objenesis</artifactId>
-            <version>2.2</version>
-        </dependency>
-		
+			<groupId>org.objenesis</groupId>
+			<artifactId>objenesis</artifactId>
+			<version>2.2</version>
+		</dependency>
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
 			<version>3.2.1</version>
 		</dependency>
-	
+
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+
 	</dependencies>
 </project>
