@@ -2,7 +2,7 @@ package org.xxhh.java300.jvm;
 
 import java.text.DecimalFormat;
 
-public class Main {
+public class GetJvmMemoryInfo {
     /**
     * 显示JVM总内存，JVM最大内存和总空闲内存
     */
@@ -30,6 +30,6 @@ public class Main {
     * @param args the command line arguments
     */
     public static void main(String[] args) {
-        new Main().displayAvailableMemory();
+        new GetJvmMemoryInfo().displayAvailableMemory();
     }
 }

@@ -6,7 +6,7 @@ package org.xxhh.java300.jvm;
  * @author sf
  *
  */
-public class App {
+public class ShutdownHookTest {
     public static void main(String[] args) throws InterruptedException {
 
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
