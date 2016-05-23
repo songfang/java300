@@ -3,6 +3,7 @@ package org.xxhh.java300.http;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -22,9 +23,9 @@ import org.apache.commons.logging.LogFactory;
  * @author lixiangyang
  * 
  */
-public class HttpUtils {
+public class HttpUtils02 {
 
-	private static Log log = LogFactory.getLog(HttpUtils.class);
+	private static Log log = LogFactory.getLog(HttpUtils02.class);
 	
 	/**
 	 * 定义编码格式 UTF-8
@@ -174,6 +175,7 @@ public class HttpUtils {
 	private static String getUrl(Map<String, String> map, String valueEnc) {
 		
 		if (null == map || map.keySet().size() == 0) {
+			log.info("没有要抓取的内容");
 			return (EMPTY);
 		}
 		StringBuffer url = new StringBuffer();
@@ -198,5 +200,11 @@ public class HttpUtils {
 		}
 		
 		return (strURL);
+	}
+	
+	public static void main(String[] args) {
+		Map urlMap = new HashMap();
+		urlMap.put("1", "www.baidu.com");
+		log.info(HttpUtils02.getUrl(urlMap, "UTF-8"));
 	}
 }
