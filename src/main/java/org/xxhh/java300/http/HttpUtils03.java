@@ -224,6 +224,9 @@ public class HttpUtils03
     
     
     public static void main(String[] args) {
-    	System.out.println(HttpUtils03.doGet("http://www.baidu.com"));
+    	String message = HttpUtils03.doGet("http://hq.sinajs.cn/list=RB1701");
+    	String[] RB1701 = message.split("=");
+    	System.out.println(RB1701[1]);
+    	
 	}
 } 
