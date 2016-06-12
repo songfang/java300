@@ -16,13 +16,13 @@ import com.google.common.collect.Lists;
 
 public class LeaderLatchExample {
 	private static final int CLIENT_QTY = 10;
-	private static final String PATH = "/examples/leader";
+	private static final String PATH = "/ss/leader";
 
 	public static void main(String[] args) throws Exception {
 
 		List<CuratorFramework> clients = Lists.newArrayList();
 		List<LeaderLatch> examples = Lists.newArrayList();
-		TestingServer server = new TestingServer();
+		TestingServer server = new TestingServer(2181);
 		try {
 			for (int i = 0; i < CLIENT_QTY; ++i) {
 				CuratorFramework client = CuratorFrameworkFactory.newClient(server.getConnectString(), new ExponentialBackoffRetry(1000, 3));
@@ -52,9 +52,10 @@ public class LeaderLatchExample {
 			new BufferedReader(new InputStreamReader(System.in)).readLine();
 
 		} catch (Exception e) {
+			System.out.println("error ........................");
 			e.printStackTrace();
 		} finally {
-			System.out.println("Shutting down...");
+			System.out.println("Shutting down...？？？");
 			for (LeaderLatch exampleClient : examples) {
 				CloseableUtils.closeQuietly(exampleClient);
 			}
