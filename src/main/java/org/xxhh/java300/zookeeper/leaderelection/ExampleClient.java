@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ExampleClient extends LeaderSelectorListenerAdapter implements Closeable {
 	private final String name;
-	private final LeaderSelector leaderSelector;
+	private final LeaderSelector leaderSelector;    //LeaderSelector是所有存活的客户端不间断的轮流做Leader
 	private final AtomicInteger leaderCount = new AtomicInteger();
 
 	public ExampleClient(CuratorFramework client, String path, String name) {
